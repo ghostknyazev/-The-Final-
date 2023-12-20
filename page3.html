@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js.js"></script>
+    <title>Страница 3</title>
+</head>
+<body>
+<header>
+    <img src="logo.jpg" alt="Логотип" onclick="window.location.href='index.html'">
+</header>
+<nav>
+    <ul>
+        <li><a href="page1.html">Страница 1</a></li>
+        <li><a href="page2.html">Страница 2</a></li>
+        <li><a href="page3.html">Страница 3</a></li>
+    </ul>
+</nav>
+
+<section>
+    <h1>Страница 3</h1>
+    <img class="animation" src="image4.gif" alt="Картинка 3">
+    <p>Это содержание страницы 3. Нажмите на логотип в левом верхнем углу, чтобы вернуться на главную страницу.</p>
+    <a><br><br>Просто вбейте что-то:<br></a>
+
+    <input type="text" id="num1"> +
+    <input type="text" id="num2">
+
+    <button onclick="calc()">Жмяк</button>
+    
+    <form name="forma1">Собираетесь играть в Dayz?<br>
+        <input type="radio" name="answer" value="yes" checked> да
+        <input type="radio" name="answer" value="no"> нет
+    </form>
+
+    <form name="forma1">Какой язык вы хотите изучать:
+        <select name="language" size="1">
+            <option selected value="html">html
+            <option value="php">php
+            <option value="java">java
+            <option value="kotlin">kotlin
+            <option value="python">python
+        </select><br><br>
+    </form>
+
+    <form name="forma1">
+        <label for="load">Выберите файл: </label>
+        <input type="file" name="load" size="30">
+    </form>
+</section>
+<title>Калькулятор</title>
+    <script>
+        function calculate() {
+            // Получаем значения из ячеек
+            var num1 = Number(document.getElementById("num1").value);
+            var num2 = Number(document.getElementById("num2").value);
+            
+            // Выполняем операции
+            var multiplication = num1 * num2;
+            var division = num1 / num2;
+            var subtraction = num1 - num2;
+            var addition = num1 + num2;
+            
+            // Выводим результаты в ячейки
+            document.getElementById("multiplicationResult").value = multiplication;
+            document.getElementById("divisionResult").value = division;
+            document.getElementById("subtractionResult").value = subtraction;
+            document.getElementById("additionResult").value = addition;
+        }
+    </script>
+</head>
+<body>
+    <center> 
+    <h4>Калькулятор</h4>
+    <table> 
+        <tr>
+            <td>Первое число:</td>
+            <td><input type="number" id="num1"></td>
+        </tr>
+        <tr>
+            <td>Второе число:</td>
+            <td><input type="number" id="num2"></td>
+        </tr>
+        <tr>
+            <td>Умножение:</td>
+            <td><input type="number" id="multiplicationResult" readonly></td>
+        </tr>
+        <tr>
+            <td>Деление:</td>
+            <td><input type="number" id="divisionResult" readonly></td>
+        </tr>
+        <tr>
+            <td>Вычитание:</td>
+            <td><input type="number" id="subtractionResult" readonly></td>
+        </tr>
+        <tr>
+            <td>Сложение:</td>
+            <td><input type="number" id="additionResult" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="calculate()">Рассчитать</button></td>
+        </tr>
+    </table>
+    <center>
+</body>
+<footer>
+    &copy; 2023 Mb&Ghost
+</footer>
+</body>
+</html>
